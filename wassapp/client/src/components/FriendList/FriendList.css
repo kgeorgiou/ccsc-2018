@@ -1,0 +1,59 @@
+.friendListContainer {
+    position: fixed;
+    left: 0;
+    top: 64px;
+    width: 240px;
+    height: 100%;
+    border-right: 1px solid rgba(0, 0, 0, 0.12);
+    z-index: 100;
+}
+
+.footNote {
+    font-size: 0.9em;
+    position: fixed;
+    bottom: 0;
+    width: 240px;
+    height: 90px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    background-color: white;
+}
+
+.footNote p {
+    margin: 4px 0;
+}
+
+.footNote a {
+    text-underline-position: under;
+}
+
+.friendsHeading {
+    display: flex;
+    justify-content: center;
+    padding: 12px 24px 0px 24px;
+}
+
+.friendsTitle {
+    margin: auto 0;
+}
+
+.friendOnline {
+    cursor: 'pointer'; 
+}
+
+.friendSelected {
+    background: '#ddd';
+}
+
+@media (max-width: 680px)  {
+    .friendListContainer {
+        width: 150px;
+    }
+
+    .footNote {
+        width: 150px;
+    }
+}

@@ -1,0 +1,23 @@
+http:
+  port: ":8989"
+
+flag: 
+  value: <replace with flag value>
+  probability: 4 # 1 in 4
+
+replies:
+  - brb
+  - give me a sec
+  - wow is that a new font? cool 
+  - wait, first check my interview on bloomberg tech https://youtu.be/dQw4w9WgXcQ 
+  - just a minute, spilled pop all over my keyboard 😩
+  - is this some sort of coding? 🤔 i can't read it
+  - what?
+  - hold on, Gavin is on the phone
+
+friends: # map
+  "1842042":
+
+mockReplyDelay: 3 # seconds
+
+maxSessionEntries: 2000

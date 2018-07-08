@@ -1,0 +1,93 @@
+.chatContainer {
+    margin-top: 64px;
+    padding: 12px 5px;
+    width: calc(100vw - 241px);
+    float: right;
+    box-sizing: border-box;
+}
+
+.chatBox {
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    width:100%;
+    height: 90px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;    
+    width: calc(100vw - 241px);
+    z-index: 99;
+}
+
+.chatBox textarea {
+    width: 100%;
+    height: 90px;
+    padding: 18px;    
+    outline: none;
+    border: none;
+    resize: none;
+    font-size: 1em;
+    background: white;
+}
+
+.btnSend {
+    position: fixed !important ;
+    bottom: 18px;
+    right: 18px;
+}
+
+.messages {
+    height: calc(100vh - 175px);
+    overflow-y: auto;
+}
+
+.messageBubble {
+    padding: 8px 20px;
+    border-radius: 18px;
+    color: white;
+    margin: 4px 16px;
+    max-width: 60%;
+    text-align: left;
+    overflow-wrap: break-word;
+}
+
+.mine {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+}
+
+.mine span {
+    background: #3f51b5;
+}
+
+.theirs {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+}
+
+.theirs span {
+    background: #1fca11;
+}
+
+.chatPlaceholder {
+    overflow: hidden;
+    padding-top: 24px;
+    box-sizing: border-box;
+}
+
+.chatPlaceholder img {
+    width: 30%;
+    height: auto;
+    margin: 40px auto;
+}
+
+@media (max-width: 680px)  {
+    .chatBox {
+        width: calc(100vw - 151px);
+    }
+
+    .chatContainer {
+        width: calc(100vw - 151px);
+    }
+}
