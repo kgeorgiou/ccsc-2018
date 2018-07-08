@@ -2,7 +2,7 @@
 
 WassApp is an End to End Encryption messaging service that uses ECDH key exchange between 2 friends to establish a secure connection and ensure that only the 2 friends can read the messages, even though the conversation takes place via an unsecure medium, the Internet.  
 
-1. Visit the homepage. The UI is loaded. The user is already "logged in" their account and can see their friends list. Only 1 friend is available, the other 2 have blocked us (insignificant for the challenge)
+1. Visit the homepage. The UI is loaded. The user is already "logged in" their account and can see their friends list. Only 1 of our friends is available, the other 2 have blocked us (insignificant for the challenge)
 2. We click on our only available friend:
     - The app checks if we have an ECDH keypair in IndexedDB, if not we generate a new ECDH keypair (with [Web Crypto API](https://www.w3.org/TR/WebCryptoAPI/)) and puts it in IndexedDB
     - A call to `/handshake` is initiated were we send our public ECDH JWK key and we receive the public ECDH JWK key of our friend (mocked by the server.) We import that key (with Web Crypto API) and also put it in IndexedDB
