@@ -2,7 +2,7 @@ http:
   port: ":8989"
 
 flag: 
-  value: <replace with flag value>
+  value: CYCTF{end2end_r0cks__unt1l_th3_end_1s_compromis3d}
   probability: 4 # 1 in 4
 
 replies:
