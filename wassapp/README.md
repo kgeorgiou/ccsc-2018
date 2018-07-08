@@ -1,10 +1,10 @@
 ## Scenario
 
-WassApp is an End to End Encryption messaging service that uses ECDH key exchange between 2 friends to establish a secure connection and ensure that only the 2 friends can read the messages, even though the conversation takes place via an unsecure medium, the Internet.  
+> The super secure messaging service you use to talk with your friend seems a bit flaky today.
 
 ## Solution
 
-Coming soon.  
+The solution can be found [here](./SOLUTION.md).  
 
 ## Notes  
 
