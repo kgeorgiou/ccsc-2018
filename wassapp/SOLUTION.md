@@ -2,11 +2,11 @@
 
 1. Visit the homepage. The UI is loaded. The user is already "logged in" their account and can see their friends list. Only 1 friend is available, the other 2 have blocked us (insignificant for the challenge)
 2. We click on our only available friend:
-    - The app checks if we have an ECDH keypair in IndexedDB, if not we generate a new ECDH keypair (with Web Crypto API) and puts it in IndexedDB
+    - The app checks if we have an ECDH keypair in IndexedDB, if not we generate a new ECDH keypair (with [Web Crypto API](https://www.w3.org/TR/WebCryptoAPI/)) and puts it in IndexedDB
     - A call to `/handshake` is initiated were we send our public ECDH JWK key and we receive the public ECDH JWK key of our friend (mocked by the server.) We import that key (with Web Crypto API) and also put it in IndexedDB
 3. We send any message to our friend
 4. The reply on the UI is encrypted (i.e. the app didn't decrypt the message)
-6. Looking into the JS files of the page we find a comment from a rogue individual that removed the decryption function
+6. Looking into the JS files of the page we find a comment from a rogue individual that removed the [decryption function](https://github.com/kgeorgiou/ccsc-2018/blob/7ea791a52c41fc0838777622025335b70e308c5b/wassapp/client/src/utils/crypto.js#L89-L105)
 
 ## Solution(s)  
 
@@ -19,6 +19,7 @@ We can use the browser's console (or the debugger) to write some code (or re-use
 - Performs the ECDH derivation using the Web Crypto API  
 - Uses the derived secret to decrypt the incoming message replies  
 
+We can enter the following helper functions (which can be found in the frontend code we already have) in our browser's console:
 ```
 const _base64ToArrayBuffer = (base64) => {
     let binary_string = window.atob(base64);
