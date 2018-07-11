@@ -6,6 +6,10 @@
 
 The solution can be found [here](./SOLUTION.md).  
 
+## External Writeups
+
+1. https://medium.com/@apogiatzis/teamcyprus-ecsc-qualifiers-ctf-wassapp-challenge-writeup-c25ea94547b5
+
 ## Notes  
 
 This challenge won't work on Firefox because of a bug with saving EC private keys in IndexedDB: https://bugzilla.mozilla.org/show_bug.cgi?id=1379493  
