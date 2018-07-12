@@ -29,7 +29,7 @@ func encrypt(message []byte, iv []byte, theirPublic *ecdsa.PublicKey, myPrivate 
 }
 
 func deriveSecretFromECDH(theirPublic *ecdsa.PublicKey, myPrivate *ecdsa.PrivateKey) []byte {
-	secret, _ := elliptic.P256().ScalarMult(theirPublic.X, theirPublic.Y, privateKey.D.Bytes())
+	secret, _ := elliptic.P256().ScalarMult(theirPublic.X, theirPublic.Y, myPrivate.D.Bytes())
 	return secret.Bytes()
 }
 
